@@ -1,8 +1,14 @@
+
 # MyPortfolio
 
-This project is based on front-end with HTML5, JavaScript and CSS.
-It´s my future Portfolio website where you will find some of my projects and some other info relating me as a Developer.
+This is my Portfolio Web-App. Here you will find some of the basics info regarding my Web developer carier. It has based in HTML5, JavaScript and CSS. 
 
-It also includes some Certificates.
+# Links
 
-Thanks for visiting.
+It contains different links regarding my works, certificates and other info.
+
+# Email
+
+It also contains a contact form where you will be able to send an email to my email adress.
+
+
