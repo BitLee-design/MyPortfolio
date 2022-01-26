@@ -36,6 +36,10 @@ ul {
     font-size: 30px;
 }
 
+ul.show {
+    display: block;
+}
+
 li {
     /*width: 200px;*/
     text-decoration: none;
@@ -120,6 +124,7 @@ p {
     flex-direction: column;
     text-align: center; 
     padding: 80px;
+    margin-top: 0%;
 }
 
 .headshot {
@@ -130,6 +135,8 @@ p {
 .headshout-container {
     display: flex;
     align-items: center;
+    padding: 80px;
+    
 }
 
 .project-card {
@@ -142,7 +149,6 @@ p {
 
 .project-container {
     display: flex;
-    
     justify-content: space-around;
     padding: 150px;
     
@@ -157,8 +163,8 @@ p {
 }
 
 .project-image {
-    margin-top: 25px;
-    width: 250px;
+    margin-top: -50px;
+    width: 150px;
     border-radius: 125px;
 }
 
@@ -177,9 +183,7 @@ a {
     color: white;
 }
 
-.hamburger {
-    display: none;
-}
+
 
 .hamburger:focus {
     outline: 0;
@@ -198,7 +202,7 @@ a {
     }
     ul{
         display: none;
-        background-color: rgb(43, 144, 226);
+        background-color: coral;
         margin: 0px;
     
     }
