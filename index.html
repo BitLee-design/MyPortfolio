@@ -1,9 +1,9 @@
 <!DOCTYPE HTML >
 <html>
    <head>
-      <title>BitLee-desig-Portfolio</title>
+      <title>BitLee-desig Portfolio</title>
       <meta charset="UTF-8" />
-      <link rel="stylesheet" href="src/styles.css" />
+      <link rel="stylesheet" href="styles.css" />
 	  
 	  <link rel="preconnect" href="https://fonts.googleapis.com">
 	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
@@ -14,7 +14,7 @@
       <body>
 		    <section class="pro">
     		    <nav>
-		            <img class="logo" src="src/images/ef.png" alt="el logo" />
+		            <img class="logo" src="public/images/ef.png" alt="el logo" />
 		            <ul id="nav-list">
 		                <li><a href="#About me">About me</a></li>
 		                <li><a href="#Projects">Projects</a></li>
@@ -59,7 +59,7 @@
 		            <p>Hello, my name is Eliseu Barreira a Web Developer, AWS Machine Learning, GCP Developer.</p>
 				</div>  
 		        <div class="headshot-container">
-		            <img class="headshot" src="src/images/el2.jpg" alt="Eliseu Barreira"/>
+		            <img class="headshot" src="public/images/el2.jpg" alt="Eliseu Barreira"/>
 		        </div>	             
 		    </section>
 			<hr/>
@@ -69,7 +69,7 @@
 				<hr/>
 		            <div class="project-container">
 		                <div class="project-card">
-		                    <img class="project-image" src="/src/images/g5.jpg" alt="Project card image" />
+		                    <img class="project-image" src="public/images/g5.jpg" alt="Project card image" />
 		                    <h3>Nice Faces</h3>
 		                    <p class="subtext">This is a Social App to interact with</p>
 		                    <hr/>
@@ -77,11 +77,19 @@
 		                </div>
 		                
 		                <div class="project-card">
-		                    <img class="project-image" src="/src/images/g4.jpg" alt="Project card image" />
+		                    <img class="project-image" src="public/images/g4.jpg" alt="Project card image" />
 		                    <h3>Easy Portuguese</h3>
-		                    <p class="subtext">This is a Portuguese basic language App</p>
+		                    <p class="subtext">A Portuguese basic language App</p>
 		                    <hr/>
 		                    <p class="subtext"><a class="project-link" href="https://play.google.com/store/apps/details?id=com.eliferbit.easyumbumdu">View here</a><p>             
+		                </div>
+						
+						<div class="project-card">
+							<img class="project-image" src="public/images/eti.jpg" alt="Project card image" />
+		                    <h3>Video Player</h3>
+		                    <p class="subtext">A nice Video Player</p>
+		                    <hr/>
+		                    <p class="subtext"><a class="project-link" href="https://music-play-3e599.web.app/">View here</a><p>             
 		                </div>		                
 		            </div>
 		    </section>
@@ -99,11 +107,20 @@
 		    <hr/>
 
 		    <footer id="Contact me">
-		        <h2>Contact me</h2>
-				<p class="subtext"><a class="project-link" href="https://g.dev/eliferbit">eliferbit@gmail.com</a></p>
+				<h2>Contact me</h2>
+				<form action="https://formsubmit.co/eliferbit@gmail.com" method="POST">
+					<input type="hidden" name="_subject" value="New email">
+					<input type="text" name="name" placeholder="Name" required>
+					<input type="email" name="email" placeholder="Email Adress" required>
+					<input type="hidden" name="_next" value="https://mydomain.net/public/pages/thanks.html">
+					<input type="text" name="message" placeholder="write your message here" required>
+					<button type="submit">Send</button>
+				</form>
+		        <br />
+				<p class="subtext"><a class="project-link" href="https://g.dev/eliferbit"><ul></ul>eliferbit.dev</p>
 		    </footer>
 		
-		    <script src="src/app.js"></script>
+		    <script src="public/app.js"></script>
 
       </body>|
 </html>
