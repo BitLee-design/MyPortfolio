@@ -74,15 +74,13 @@ p {
 
 .pro-text {
     margin-left: 30px;
-    margin-bottom: 600px;
-    padding: 40px;
-    padding-top: 80%;
-    text-decoration: blueviolet;
+    margin-bottom: 200px;
 }
 
-.table-area {
+.table-area { 
+    align-items: center;
+    margin: auto;
     color: white;
-    margin: 10px;
     height: 80px;
     text-transform: inherit;
     text-decoration: blueviolet;
@@ -93,15 +91,40 @@ p {
     color: white;
 }
 
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: coral;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: orange;  
+    
+}
+
 .button:active {
     background-color: darkgrew;
     color: black;
+}
+
+.socials {
+    padding-bottom: 200px;
 }
 
 .logo {
     height: 90px;
     margin: 30px;
     border-radius: 30%;
+}
+
+.social {
+    margin: 20px;
 }
 
 .sub-section {
@@ -154,6 +177,11 @@ p {
     }
 }
 
+.project-image {
+    margin-top: -50px;
+    width: 150px;
+    border-radius: 125px;
+}
 
 hr {
     margin-left: 20px;
@@ -170,12 +198,9 @@ a {
     color: white;
 }
 
-
-
 .hamburger:focus {
     outline: 0;
 }
-
 
 @media only screen and (max-width: 1000px) {
     .hamburger {
@@ -208,4 +233,3 @@ a {
         display: inline-flex;
     }
 }
-
