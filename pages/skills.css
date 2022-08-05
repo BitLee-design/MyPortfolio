@@ -77,7 +77,8 @@ p {
     margin-bottom: 200px;
 }
 
-.table-area { 
+.table-area {
+    font-size: 3rem;
     align-items: center;
     margin: auto;
     color: white;
@@ -87,7 +88,7 @@ p {
     
 }
 
-.tr {
+.td {
     color: white;
 }
 
@@ -189,6 +190,7 @@ hr {
 }
 
 .project-link {
+    font-size: 2.5rem;
     text-decoration: none;
     color: coral;
 }
