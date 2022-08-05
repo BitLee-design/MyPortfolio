@@ -1,11 +1,11 @@
 
 # MyPortfolio
 
-This is my Portfolio Web-App. Here you will find some of the basics info regarding my Web development. It has based in HTML5, JavaScript and CSS. 
+This is my Portfolio Web-App. Here you will find some of the basics regarding my Web development. It is based in HTML5, JavaScript and CSS. 
 
 # Links
 
-It contains different links regarding my works, certificates and other info.
+It contains different links regarding my works, certificates and other info related to my dev journey. 
 
 # Email
 
