@@ -30,7 +30,12 @@ h2 {
 .project-link {
     text-align: center;
     font-size: medium;
-    
+}
+
+.pro-text:hover {
+    margin-left: 320px;
+    font-size: 2rem;
+    background-color: orange;
 }
 
 .logo2 {
