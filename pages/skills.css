@@ -85,6 +85,7 @@ p {
 }
 
 .button {
+    display: flex inline;
     width: 200px;
     height: 50px;
     background-color: coral;
@@ -93,13 +94,14 @@ p {
     font-size: 30px;
     font-weight: 300;
     padding-top: 5px;
-    margin-right: 800px;
+    margin-right: 700px;
     margin-top: 420px;
 
 }
 
 .button:hover {
-    background-color: orange;  
+    background-color: orange;
+    padding: 150px;  
     
 }
 
@@ -281,11 +283,12 @@ body {
 */
 
 .table-area {
-    font-size: 3rem;
+    font-size: 2rem;
     color: aliceblue;
     align-items: center;
-    margin-left: 320px;
-    margin-right: 180px;
+    margin-left: 180px;
+    margin-right: 200px;
+    padding: 80px;
 }
 
 .project-link {
