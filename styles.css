@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
 body {
     font-family: poppins, sans-sherife;
 }
@@ -24,7 +26,7 @@ footer {
 }
 
 nav {
-    display: flex;  
+    display: flex;
     justify-content: space-between;
 }
 
