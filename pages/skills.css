@@ -85,17 +85,18 @@ p {
 }
 
 .button {
-    display: flex inline;
+    display: inline;
     width: 200px;
     height: 50px;
     background-color: coral;
     border-radius: 40px;
     text-align: center;
-    font-size: 30px;
-    font-weight: 300;
+    font-size: 20px;
     padding-top: 5px;
+    padding-left: 80;
+    padding-right: 80;
     margin-right: 700px;
-    margin-top: 420px;
+    margin-top: 620px;
 
 }
 
@@ -266,11 +267,7 @@ body {
         
     }
 
-    .logo2 {
-        align-items: center;
-        margin-left: 480px;
-        border-radius: 16%;
-    }
+    
 }
 
 /*
@@ -300,6 +297,12 @@ body {
     margin-left: 320px;
     font-size: 2rem;
     background-color: orange;
+}
+
+.logo2 {
+    align-items: center;
+    margin-left: 0px;
+    border-radius: 16%;
 }
 
 
