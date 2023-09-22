@@ -88,6 +88,7 @@ p {
     display: inline;
     width: 200px;
     height: 50px;
+    font-weight: 300;
     background-color: coral;
     border-radius: 40px;
     text-align: center;
@@ -97,7 +98,6 @@ p {
     padding-right: 80;
     margin-right: 700px;
     margin-top: 620px;
-
 }
 
 .button:hover {
