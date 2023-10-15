@@ -160,6 +160,28 @@ p {
     
 }
 
+  /* Media query for medium screens */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .project-container {
+      padding: 30px;
+    }
+  }
+  
+  /* Media query for large screens */
+  @media only screen and (min-width: 1025px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .project-container {
+      padding: 40px;
+    }
+  }
+/*
 @media only screen and (max-width: 1000px) {
     .project-container {
         display: flex;
@@ -167,7 +189,7 @@ p {
         
     }
 }
-
+*/
 .project-image {
     margin-top: -50px;
     width: 150px;
