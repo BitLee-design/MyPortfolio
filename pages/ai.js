@@ -2,26 +2,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Get the elements you want to manipulate
     var heading = document.querySelector("h1");
-    var submitButton = document.querySelector("#submit-button");
+    var clickHereButton = document.querySelector("#clickHere-button");
     
     // Add event listener to a button
     submitButton.addEventListener("click", function(event) {
         event.preventDefault(); // Prevent form submission
         
         // Access form input values
-        var nameInput = document.querySelector("#name");
-        var emailInput = document.querySelector("#email");
-        var messageInput = document.querySelector("#message");
+        var clickHereInput = document.querySelector("#Click Here");
         
         // Display form input values in console
-        console.log("Name:", nameInput.value);
-        console.log("Email:", emailInput.value);
-        console.log("Message:", messageInput.value);
+        console.log("ClickHer:", clickHereInput.value);
         
         // Clear form input values
-        nameInput.value = "";
-        emailInput.value = "";
-        messageInput.value = "";
+        clickHereInput.value = "";
+    
     });
     
     // Manipulate the heading element
