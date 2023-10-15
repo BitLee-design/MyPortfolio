@@ -164,11 +164,12 @@ p {
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     body {
       font-size: 16px;
-      display: flex;
+    
     }
   
     .project-container {
       padding: 30px;
+      display: flex;
     }
   }
   
@@ -176,11 +177,12 @@ p {
   @media only screen and (min-width: 1025px) {
     body {
       font-size: 18px;
-      display: flex;
+      
     }
   
     .project-container {
       padding: 40px;
+      display: flex;
     }
   }
 /*
