@@ -252,6 +252,7 @@ a {
     
     .logo {
         display: none;
+        border-radius: 16px;
     }
     
 }
