@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var clickHereInput = document.querySelector("#Click Here");
         
         // Display form input values in console
-        console.log("ClickHer:", clickHereInput.value);
+        console.log("ClickHere:", clickHereInput.value);
         
         // Clear form input values
         clickHereInput.value = "";
