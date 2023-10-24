@@ -208,6 +208,7 @@ hr {
 .project-link {
     text-decoration: none;
     color: coral;
+    border-radius: 16px;
 }
 
 a {
