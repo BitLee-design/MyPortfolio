@@ -253,5 +253,9 @@ a {
         display: none;
         border-radius: 16px;
     }
+
+    .logo2 {
+        border-radius: 16px;
+    }
     
 }
