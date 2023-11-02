@@ -254,5 +254,12 @@ a {
         display: none;
         border-radius: 16px;
     }
+
+    .logo2 {
+        align-items: center;
+        margin-left: 0px;
+        border-radius: 16%;
+    }
+    
     
 }
