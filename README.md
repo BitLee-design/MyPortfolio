@@ -17,6 +17,11 @@ Encontrará também hiper ligações a outros Aplicativos, Certificados e outras
 It also contains a contact form where you will be able to send an email to my inbox.
 
 Também contêm um forma automática para ênvio de email para meu correio eletrónico
+
+# AI
+There is also an AI page that you can interact with.
+
+Está também disponível uma página de Inteligência Artificial que poderá explorar.
 # More Info
 
 https://github.com/BitLee-design/BitLee-design/blob/main/README.md
