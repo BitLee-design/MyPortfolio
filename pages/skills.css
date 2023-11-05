@@ -178,7 +178,7 @@ p {
   @media only screen and (min-width: 1025px) {
     body {
       font-size: 18px;
-      display: flex;
+
     }
   
     .pro {
