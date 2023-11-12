@@ -160,13 +160,12 @@ p {
 
     .pro {
         display:grid;
-        justify-content: space-between;
         background-color: #4030F2;
         height: 100vh;
         color: white;
         font-size: 60px;
         font-family: bold;
-    
+
     }
   
     project-container {
