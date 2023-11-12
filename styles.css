@@ -159,6 +159,7 @@ p {
     }
 
     .pro {
+        display: flex;
         background-color: #4030F2;
         height: 100vh;
         color: white;
