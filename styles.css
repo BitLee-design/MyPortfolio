@@ -161,6 +161,9 @@ p {
     .pro {
         display:grid;
         position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
         padding: 90px 0 0;
         background-color: #4030F2;
         height: 100vh;
