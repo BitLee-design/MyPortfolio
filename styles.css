@@ -11,7 +11,7 @@ section {
 }
 
 .pro {
-    background-color: #4030F2;
+    background-color: #f1f1f7;
     height: 150vh;
     color: white;
     font-size: 60px;
@@ -45,7 +45,6 @@ ul.show {
 }
 
 li {
-    /*width: 200px;*/
     text-decoration: none;
 }
 
@@ -260,12 +259,12 @@ a {
         display: none;
         border-radius: 16px;
     }
+    
+    
+}
 
-    .logo2 {
-        align-items: center;
-        margin-left: 0px;
-        border-radius: 16%;
-    }
-    
-    
+.logo2 {
+    align-items: center;
+    margin-left: 0px;
+    border-radius: 16%;
 }
