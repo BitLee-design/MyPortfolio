@@ -10,6 +10,14 @@ section {
     
 }
 
+.pro {
+    background-color: #4030F2;
+    height: 100vh;
+    color: white;
+    font-size: 60px;
+    font-family: bold;
+}
+
 footer {
     background-color: #4030F2;
     color: white;
@@ -157,9 +165,8 @@ p {
       font-size: 16px;
     
     }
-
+/*
     .pro {
-        display:grid;
         position: fixed;
         top: 0;
         bottom: 0;
@@ -172,6 +179,7 @@ p {
         font-family: bold;
 
     }
+    */
   
     project-container {
       padding: 30px;
