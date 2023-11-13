@@ -16,6 +16,7 @@ section {
     color: white;
     font-size: 60px;
     font-family: bold;
+    justify-content: right;
 }
 
 footer {
@@ -27,7 +28,7 @@ footer {
 
 .nav:hover {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between right;
     color: #4030F2;
 }
 
@@ -181,13 +182,37 @@ p {
     }
     */
   
-    project-container {
+    .project-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 150px;
+        
+    }
+
+   /* Media query for medium screens */
+   @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .pro {
       padding: 30px;
-      
     }
   }
   
   /* Media query for large screens */
+  @media only screen and (min-width: 1025px) {
+    body {
+      font-size: 18px;
+
+    }
+  
+    .pro {
+      padding: 40px;
+    }
+  }
+  
+  /* Media query for large screens 
   @media only screen and (min-width: 1025px) {
     body {
       font-size: 18px;
