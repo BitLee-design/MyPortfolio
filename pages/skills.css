@@ -256,50 +256,6 @@ a {
     }
 }
 
-
-
-/*
-body {
-    background-color: blue;
-}
-
-@media only screen and (max-width: 1000px) {
-    .logo {
-        align-items: center;
-        margin-left: 480px;
-        border-radius: 16%;
-    }
-
-    h2 {
-        text-align: center;
-        margin-right: 380px;
-    }
-
-}
-
-
-@media only screen and (max-width: 1000px) {
-
-    .pro-area {
-        
-        color: aliceblue;
-        text-align: center;
-        margin-left: 280px;
-        
-    }
-
-    
-}
-
-/*
-.pro-area {
-    color: aliceblue;
-    text-align: center;
-    margin-left: 280px;
-    
-}
-*/
-
 .table-area {
     font-size: 2rem;
     color: aliceblue;
