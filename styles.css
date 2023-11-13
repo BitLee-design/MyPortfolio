@@ -160,6 +160,8 @@ p {
 
     .pro {
         display:grid;
+        position: fixed;
+        padding: 90px 0 0;
         background-color: #4030F2;
         height: 100vh;
         color: white;
