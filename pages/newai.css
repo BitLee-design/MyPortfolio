@@ -1,5 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
 
+
 body {
     font-family: poppins, sans-sherife;
 }
@@ -16,7 +17,6 @@ section {
     color: white;
     font-size: 60px;
     font-family: bold;
-
 }
 
 footer {
@@ -26,10 +26,13 @@ footer {
     padding: 80px;
 }
 
-.nav:hover {
-    display: flex;
+nav {
+    display: flex;  
     justify-content: space-between;
-    color: #4030F2;
+}
+
+.nav-list {
+    margin-left: 640px;
 }
 
 ul {
@@ -45,7 +48,7 @@ ul.show {
 }
 
 li {
-    /*width: 200px;*/
+    width: 200px;
     text-decoration: none;
 }
 
@@ -78,7 +81,7 @@ p {
 
 .pro-text {
     margin-left: 30px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
 }
 
 .button {
@@ -89,12 +92,13 @@ p {
     text-align: center;
     font-size: 30px;
     font-weight: 300;
-    padding-top: 5px;
-    margin-top: 20px;
+    padding-top: 15px;
+    margin-top: 10px;
 }
 
 .button:hover {
-    background-color: orange;  
+    background-color: orange;
+    padding: 15px;  
     
 }
 
@@ -132,8 +136,8 @@ p {
 }
 
 .headshot {
-    width: 200px;
-    border-radius: 125px;
+    width: 250px;
+    border-radius: 150px;
 }
 
 .headshout-container {
@@ -150,7 +154,6 @@ p {
     box-shadow: 5px 5px 20px white;
     margin: 20px;
     padding-top: 60px;
-    border-radius: 8px;
 }
 
 .project-container {
@@ -164,12 +167,10 @@ p {
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     body {
       font-size: 16px;
-    
     }
   
-    .project-container {
+    .pro {
       padding: 30px;
-      
     }
   }
   
@@ -177,15 +178,15 @@ p {
   @media only screen and (min-width: 1025px) {
     body {
       font-size: 18px;
-      
+
     }
   
-    .project-container {
+    .pro {
       padding: 40px;
-      
     }
   }
-/*
+
+ /* 
 @media only screen and (max-width: 1000px) {
     .project-container {
         display: flex;
@@ -194,6 +195,7 @@ p {
     }
 }
 */
+
 .project-image {
     margin-top: -50px;
     width: 150px;
@@ -208,7 +210,6 @@ hr {
 .project-link {
     text-decoration: none;
     color: coral;
-    border-radius: 16px;
 }
 
 a {
@@ -223,7 +224,7 @@ a {
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
     .hamburger {
         display: block;
         border: 0;
@@ -252,14 +253,31 @@ a {
     
     .logo {
         display: none;
-        border-radius: 16px;
     }
+}
 
-    .logo2 {
-        align-items: center;
-        margin-left: 0px;
-        border-radius: 16%;
-    }
-    
-    
+.table-area {
+    font-size: 2rem;
+    color: aliceblue;
+    align-items: center;
+    margin-left: 180px;
+    margin-right: 200px;
+    padding: 80px;
+}
+
+.project-link {
+    text-align: center;
+    font-size: medium;
+}
+
+.pro-text:hover {
+    margin-left: 320px;
+    font-size: 2rem;
+    background-color: orange;
+}
+
+.logo2 {
+    align-items: center;
+    margin-left: 0px;
+    border-radius: 16%;
 }
