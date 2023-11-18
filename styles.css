@@ -1,5 +1,6 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
 
+
 body {
     font-family: poppins, sans-sherife;
 }
@@ -12,11 +13,10 @@ section {
 
 .pro {
     background-color: #4030F2;
-    height: 150vh;
+    height: 100vh;
     color: white;
     font-size: 60px;
     font-family: bold;
-    justify-content: right;
 }
 
 footer {
@@ -26,10 +26,13 @@ footer {
     padding: 80px;
 }
 
-.nav:hover {
-    display: flex;
-    justify-content: space-between right;
-    color: #4030F2;
+nav {
+    display: flex;  
+    justify-content: space-between;
+}
+
+.nav-list {
+    margin-left: 640px;
 }
 
 ul {
@@ -45,6 +48,7 @@ ul.show {
 }
 
 li {
+    width: 200px;
     text-decoration: none;
 }
 
@@ -77,7 +81,7 @@ p {
 
 .pro-text {
     margin-left: 30px;
-    margin-bottom: 350px;
+    margin-bottom: 200px;
 }
 
 .button {
@@ -88,12 +92,13 @@ p {
     text-align: center;
     font-size: 30px;
     font-weight: 300;
-    padding-top: 5px;
-    margin-top: 20px;
+    padding-top: 15px;
+    margin-top: 10px;
 }
 
 .button:hover {
-    background-color: orange;  
+    background-color: orange;
+    padding: 15px;  
     
 }
 
@@ -103,7 +108,7 @@ p {
 }
 
 .socials {
-    padding-bottom: 240px;
+    padding-bottom: 200px;
 }
 
 .logo {
@@ -149,18 +154,17 @@ p {
     box-shadow: 5px 5px 20px white;
     margin: 20px;
     padding-top: 60px;
-    border-radius: 8px;
 }
 
 .project-container {
     display: flex;
     justify-content: space-around;
     padding: 150px;
-        
+    
 }
 
-   /* Media query for medium screens */
-   @media only screen and (min-width: 769px) and (max-width: 1025px) {
+  /* Media query for medium screens */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     body {
       font-size: 16px;
     }
@@ -181,20 +185,8 @@ p {
       padding: 40px;
     }
   }
-  
-  /* Media query for large screens 
-  @media only screen and (min-width: 1025px) {
-    body {
-      font-size: 18px;
-      
-    }
-  
-    project-container {
-      padding: 40px;
-      
-    }
-  }
-/*
+
+ /* 
 @media only screen and (max-width: 1000px) {
     .project-container {
         display: flex;
@@ -203,6 +195,7 @@ p {
     }
 }
 */
+
 .project-image {
     margin-top: -50px;
     width: 150px;
@@ -224,9 +217,12 @@ a {
     color: white;
 }
 
+
+
 .hamburger:focus {
     outline: 0;
 }
+
 
 @media only screen and (max-width: 1024px) {
     .hamburger {
@@ -257,10 +253,27 @@ a {
     
     .logo {
         display: none;
-        border-radius: 16px;
     }
-    
-    
+}
+
+.table-area {
+    font-size: 2rem;
+    color: aliceblue;
+    align-items: center;
+    margin-left: 180px;
+    margin-right: 200px;
+    padding: 80px;
+}
+
+.project-link {
+    text-align: center;
+    font-size: medium;
+}
+
+.pro-text:hover {
+    margin-left: 320px;
+    font-size: 2rem;
+    background-color: orange;
 }
 
 .logo2 {
@@ -268,3 +281,4 @@ a {
     margin-left: 0px;
     border-radius: 16%;
 }
+
