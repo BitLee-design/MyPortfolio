@@ -157,7 +157,7 @@ export function PricingSection() {
 
               {/* CTA */}
               <a
-                href="/auth"
+                href={`/auth?plan=${plan.name.toLowerCase()}${plan.name === "Enterprise" ? "&intent=sales" : `&billing=${isAnnual ? "annual" : "monthly"}`}`}
                 className={`w-full py-4 flex items-center justify-center gap-2 text-sm font-medium transition-all group ${
                   plan.popular
                     ? "bg-foreground text-primary-foreground hover:bg-foreground/90"

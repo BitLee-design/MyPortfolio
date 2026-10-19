@@ -2,9 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function AuthPage() {
   const [mode, setMode] = useState<"login" | "signup">("signup");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const plan = searchParams.get("plan") || "starter";
+  const billing = searchParams.get("billing") || "annual";
+  const intent = searchParams.get("intent");
 
   return (
     <main className="min-h-screen bg-background text-foreground flex items-center justify-center px-6 py-16">
@@ -39,7 +45,15 @@ export default function AuthPage() {
             ))}
           </div>
 
-          <form className="space-y-5" onSubmit={(event) => event.preventDefault()}>
+          <form
+            className="space-y-5"
+            onSubmit={(event) => {
+              event.preventDefault();
+              if (mode === "signup") {
+                router.push(`/subscription?plan=${encodeURIComponent(plan)}&billing=${encodeURIComponent(billing)}${intent ? `&intent=${encodeURIComponent(intent)}` : ""}`);
+              }
+            }}
+          >
             {mode === "signup" && (
               <label className="block text-sm">
                 Name
