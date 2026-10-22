@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { FormEvent, Suspense, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
@@ -13,9 +13,14 @@ function AuthPageContent() {
   const billing = searchParams.get("billing") || "annual";
   const intent = searchParams.get("intent");
   const oauthError = searchParams.get("error");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const subscriptionPath = `/subscription?plan=${encodeURIComponent(plan)}&billing=${encodeURIComponent(billing)}${intent ? `&intent=${encodeURIComponent(intent)}` : ""}`;
 
   async function handleGoogleSignIn() {
-    const next = `/subscription?plan=${encodeURIComponent(plan)}&billing=${encodeURIComponent(billing)}${intent ? `&intent=${encodeURIComponent(intent)}` : ""}`;
+    setErrorMessage(null);
+    const next = subscriptionPath;
     const redirectTo = `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`;
     const { error } = await createClient().auth.signInWithOAuth({
       provider: "google",
@@ -27,8 +32,36 @@ function AuthPageContent() {
     });
 
     if (error) {
-      router.replace(`/auth?plan=${encodeURIComponent(plan)}&billing=${encodeURIComponent(billing)}&error=oauth`);
+      setErrorMessage("Google sign-in could not be completed. Please try again.");
     }
+  }
+
+  async function handleEmailAuth(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setErrorMessage(null);
+    setIsSubmitting(true);
+
+    const formData = new FormData(event.currentTarget);
+    const email = String(formData.get("email") || "").trim();
+    const password = String(formData.get("password") || "");
+    const supabase = createClient();
+    const result = mode === "signup"
+      ? await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL ?? `${window.location.origin}/auth/callback`,
+          },
+        })
+      : await supabase.auth.signInWithPassword({ email, password });
+
+    setIsSubmitting(false);
+    if (result.error) {
+      setErrorMessage(result.error.message);
+      return;
+    }
+
+    router.replace(subscriptionPath);
   }
 
   return (
@@ -53,17 +86,17 @@ function AuthPageContent() {
             ))}
           </div>
 
-          {oauthError && <p role="alert" className="mb-5 border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">Google sign-in could not be completed. Please try again.</p>}
+          {(oauthError || errorMessage) && <p role="alert" className="mb-5 border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">{errorMessage || "Google sign-in could not be completed. Please try again."}</p>}
 
           <button type="button" onClick={handleGoogleSignIn} className="flex h-12 w-full items-center justify-center gap-3 border border-foreground/15 font-medium transition-colors hover:bg-foreground/5">Continue with Google</button>
 
           <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground"><span className="h-px flex-1 bg-foreground/10" /><span>or use email</span><span className="h-px flex-1 bg-foreground/10" /></div>
 
-          <form className="space-y-5" onSubmit={(event) => { event.preventDefault(); if (mode === "signup") router.push(`/subscription?plan=${encodeURIComponent(plan)}&billing=${encodeURIComponent(billing)}${intent ? `&intent=${encodeURIComponent(intent)}` : ""}`); }}>
+          <form className="space-y-5" onSubmit={handleEmailAuth}>
             {mode === "signup" && <label className="block text-sm">Name<input required name="name" className="mt-2 w-full h-12 border border-foreground/15 bg-transparent px-4 outline-none focus:border-foreground" /></label>}
             <label className="block text-sm">Email<input required type="email" name="email" className="mt-2 w-full h-12 border border-foreground/15 bg-transparent px-4 outline-none focus:border-foreground" /></label>
-            <label className="block text-sm">Password<input required type="password" name="password" className="mt-2 w-full h-12 border border-foreground/15 bg-transparent px-4 outline-none focus:border-foreground" /></label>
-            <button type="submit" className="w-full h-12 bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors">{mode === "signup" ? "Create account" : "Log in"}</button>
+            <label className="block text-sm">Password<input required minLength={6} type="password" name="password" className="mt-2 w-full h-12 border border-foreground/15 bg-transparent px-4 outline-none focus:border-foreground" /></label>
+            <button disabled={isSubmitting} type="submit" className="w-full h-12 bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors disabled:opacity-60">{isSubmitting ? "Please wait..." : mode === "signup" ? "Create account" : "Log in"}</button>
           </form>
         </div>
       </div>
